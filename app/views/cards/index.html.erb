@@ -2,25 +2,25 @@
 
 <h1>Cards</h1>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="ex. BestBuy" title="Type in a name">
+<%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"])) %>
 
 <table id="myTable">
   <thead>
     <tr class="header">
       <th>Company name</th>
-      <!-- <th>Category</th> -->
+      <th>Category</th>
       <th>Amount</th>
-      <!-- <th>Expire</th> -->
-      <!-- <th colspan="2"></th> -->
+      <th>Expire</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @cards.each do |card| %>
       <tr>
          <td><%= card.company_name %></td>
-         <!-- <td><%#= card.category %></td> -->
+         <td><%= card.category %></td>
          <td><%= card.amount %></td>
-         <!-- <td><%#= card.expire %></td> -->
+         <td><%= card.expire %></td>
          <td><%= link_to 'Show', card %></td>
          <!-- <td><%#= link_to 'Edit', edit_card_path(card) %></td> -->
          <!-- <td><%#= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
@@ -30,29 +30,5 @@
 </table>
 
 <br>
-
-<script>
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-</script>
-
-
-
-
 
 <%= link_to 'New Card', new_card_path %>
