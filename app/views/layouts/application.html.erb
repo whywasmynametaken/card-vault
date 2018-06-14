@@ -7,11 +7,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
 
   <body>
+     <div class="dropdown">
+        <button id="toggle-dropdown">
+            <i class="fas fa-bars"></i>
+         </button>
+         <div id="myDropdown"
+           class="dropdown-items">
+            <a href="#profile">
+               <i class="fas fa-user"></i>Profile
+            </a>
+            <a href="#settings">
+               <i class="fas fa-cog"></i>Settings</a>
+            <a href="#whatever">Whatever</a>
+         </div>
+     </div>
      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+     <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
   </body>
