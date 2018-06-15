@@ -17,4 +17,12 @@
 .dropdown-items {
     display: none;
 }
+#myTable_length,#myTable_paginate, .sorting, .sorting_asc  {
+   display: none;
+}
+
 .show {display:inline-block;}
+
+body{
+  width: 300px;
+}
