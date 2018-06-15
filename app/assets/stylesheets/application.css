@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+/* Dropdown Button */
+.dropdown-items {
+    display: none;
+}
+.show {display:inline-block;}
