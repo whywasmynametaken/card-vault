@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/show'
+  get 'users/index'
   resources :cards
   devise_for :users, controllers: { sessions: 'users/sessions' }
    root to: "cards#index"

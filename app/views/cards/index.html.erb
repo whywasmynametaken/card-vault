@@ -4,24 +4,24 @@
 
 <%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"])) %>
 
-<table id="myTable">
+<table id="myTable"
+      class="row-border"
+>
   <thead>
     <tr class="header">
       <th>Company name</th>
       <th>Category</th>
       <th>Amount</th>
       <th>Expire</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @cards.each do |card| %>
       <tr>
-         <td><%= card.company_name %></td>
+         <td><%= link_to card.company_name, card %></td>
          <td><%= card.category %></td>
          <td><%= card.amount %></td>
          <td><%= card.expire %></td>
-         <td><%= link_to 'Show', card %></td>
          <!-- <td><%#= link_to 'Edit', edit_card_path(card) %></td> -->
          <!-- <td><%#= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
