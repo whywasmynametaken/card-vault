@@ -1,0 +1,48 @@
+/* Dropdown Button */
+.dropdown-items {
+    display: none;
+}
+
+
+.show {display:inline-block;}
+
+body{
+  /* width: 800px; */
+}
+
+
+.footer{
+  box-shadow: 0px 0px 200px lightgray;
+  border: 1px solid black;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+}
+
+ul li {
+  display: inline;
+}
+
+#dm {
+  margin-left: 9em;
+}
+
+.bottom li{
+  margin-left: 3em;
+  margin-right: 2.5em;
+}
+
+.fas {
+  color: black;
+}
+
+
+/* #myTable_filter{
+  display: table-column;
+  margin-right: 3em;
+} */
+

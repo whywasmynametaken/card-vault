@@ -1,0 +1,10 @@
+/* #myTable_length,#myTable_paginate, .sorting, .sorting_asc  {
+    display: none;
+ } */
+ 
+ table.dataTable.row-border tbody td {
+    border-top: 0px;
+  }
+  #myTable_info, #myTable_paginate, #myTable_length, .comp, .amount, .catagory, .expire {
+      display: none;
+  }

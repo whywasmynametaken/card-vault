@@ -1,6 +1,10 @@
-<h2>Log in</h2>
+<div class='form'>
+  <ul class='tab-group'>
+    <li class='tab active'><h2><%= render "devise/shared/links" %></h2></li> 
+    <li class='tab'><h2><a href="">Log In</a></h2></li>
+  </ul> 
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -13,8 +17,8 @@
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%#= f.check_box :remember_me %>
+      <%#= f.label :remember_me %>
     </div>
   <% end -%>
 
@@ -23,4 +27,4 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
