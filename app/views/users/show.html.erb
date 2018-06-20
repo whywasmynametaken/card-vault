@@ -1,5 +1,11 @@
-<%= current_user.email %>
-<br>
+E-Mail: <%= current_user.email %>
+<br><br>
+
+
 <%#= link_to "edit info", users_edit_path %>
 <%= link_to 'Back', cards_path %>
+<br>
+<%= link_to "Edit Info", edit_user_registration_path %>
+<br>
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <br>

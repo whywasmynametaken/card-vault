@@ -14,25 +14,6 @@
 
   <body>
 
-     <div class="dropdown">
-        <button id="toggle-dropdown">
-            <i class="fas fa-bars"></i>
-         </button>
-         <div id="myDropdown"
-           class="dropdown-items">
-            <a href="#profile">
-               <%= link_to "Profile", users_show_path %>
-               <!-- <i class="fas fa-user"></i>Profile -->
-            </a>
-            <a href="#settings">
-            <%= link_to "Profile" %>
-               <!-- <i class="fas fa-cog"></i>Settings -->
-            </a>
-            <a href="#whatever">Whatever</a>
-         </div>
-     </div>
-
-     <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
     <%= yield %>
         <div class="footer">
@@ -59,6 +40,5 @@
         </li>
       </ul>
     </div>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
   </body>
 </html>
