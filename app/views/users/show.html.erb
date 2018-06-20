@@ -1,5 +1,25 @@
-<%= current_user.email %>
+<h1>Profile</h1>
+
+<%= @user.email %>
 <br>
-<%#= link_to "edit info", users_edit_path %>
-<%= link_to 'Back', cards_path %>
+
+<% if current_user %>
+  <% @relationship = current_user.sent_invites.where(invited_id: @user.id).first %>
+
+  <% if @relationship %>
+      <button>
+         <%= link_to "Stop following", @relationship, method: :delete %>
+      </button>
+  <% else %>
+    <%= form_for :relationship, url: relationships_path, html: { method: :post } do |f| %>
+      <%= f.hidden_field :invited_id, value: @user.id %>
+      <%= f.submit 'Follow', class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
+<% end %>
+<% if User.id == current_user.id %>
+   <%= link_to "edit info", edit_user_registration_path %>
+   <%#= link_to 'Back', cards_path %>
+   <%= link_to "logout", destroy_user_session_path, method: :delete %>
+   <% end %>
 <br>

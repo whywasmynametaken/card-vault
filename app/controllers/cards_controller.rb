@@ -5,9 +5,8 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = current_user.cards
+    @cards = current_user.not_expired
   end
-
   # GET /cards/1
   # GET /cards/1.json
   def show
@@ -20,6 +19,10 @@ class CardsController < ApplicationController
 
   # GET /cards/1/edit
   def edit
+  end
+
+  def expired
+     @cards = current_user.expired
   end
 
   # POST /cards

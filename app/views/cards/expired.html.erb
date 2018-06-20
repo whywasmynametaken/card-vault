@@ -1,0 +1,24 @@
+<h1>Expired Cards</h1>
+
+
+   <table id="myTable"
+          class="row-border">
+      <thead>
+         <tr class="header">
+            <th>Company name</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Expire</th>
+         </tr>
+      </thead>
+      <tbody>
+         <% @cards.each do |card| %>
+            <tr>
+               <td><%= link_to card.company_name, card %></td>
+               <td><%= card.category %></td>
+               <td>$<%= card.amount %></td>
+               <td><%= card.expire %></td>
+            </tr>
+         <% end %>
+      </tbody>
+   </table>

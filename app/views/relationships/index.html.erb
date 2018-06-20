@@ -1,0 +1,25 @@
+<h1>Connected users</h1>
+
+<% if @sent_invites.any? %>
+    <h3>You Followed These Users</h3>
+    <%= (@sent_invites) %>
+    <ul>
+      <% @sent_invites.each do |invitation| %>
+          <li id="friends"><%= link_to invitation.invited_user.user_name, users_show_path(invitation.invited_user) %></li>
+      <% end %>
+    </ul>
+    <%= (@sent_invites) %>
+<% end %>
+<br>
+<% if @received_invites.any? %>
+    <h3>They Invited You</h3>
+    <%= (@received_invites) %>
+    <ul>
+      <% @received_invites.each do |invitation| %>
+          <li><%= link_to invitation.invited_user.email, users_index_path(invitation.invited_user) %></li>
+      <% end %>
+    </ul>
+    <%= (@received_invites) %>
+<% end %>
+
+<br>
