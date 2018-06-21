@@ -1,5 +1,6 @@
-<h1>Profile</h1>
-
+<h1><%= @user.user_name %> </h1>
+<%= @user.bio %>
+<br>
 <%= @user.email %>
 <br>
 
@@ -17,9 +18,9 @@
     <% end %>
   <% end %>
 <% end %>
-<% if User.id == current_user.id %>
+<% if @user == current_user %>
    <%= link_to "edit info", edit_user_registration_path %>
    <%#= link_to 'Back', cards_path %>
    <%= link_to "logout", destroy_user_session_path, method: :delete %>
-   <% end %>
+<% end  %>
 <br>

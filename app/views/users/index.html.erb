@@ -1,3 +1,5 @@
+<div class="form">
+
 <h1>Search For New Friends</h1>
 
 <table id="myTable"
@@ -13,9 +15,11 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>]
-         <td><%= link_to user.email, users_show_path(user) %></td>
-         <td><%= user.user_name %></td>
+         <td><%= link_to user.user_name, users_show_path(user) %></td>
+         <td><%= user.email %></td>
          <td><%= user.bio %></td>
     <% end %>
   </tbody>
 </table>
+
+</div>

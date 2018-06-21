@@ -4,6 +4,8 @@
 
 <%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"]), {class: 'form-control'}) %>
 
+<button><%= link_to "EXPIRED CARDS", cards_expired_path %>  </button>
+
 <table id="myTable"
       class="row-border"
 >

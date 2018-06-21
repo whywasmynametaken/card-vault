@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'users/show/:id' => 'users#show', as: :users_show
   get 'users/index'
   get 'users/profile'
+  get 'users/edit'
   get 'cards/expired'
   resources :cards
   devise_for :users, controllers: { sessions: 'users/sessions' }
