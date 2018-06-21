@@ -9,14 +9,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-
-  def not_expired
-     self.cards.where('expire >= ?', Time.now)
-  end
-
-  def expired
-     self.cards.where('expire < ?', Time.now)
-  end
-
 end

@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     <% @users.each do |user| %>
-      <tr>]
+      <tr>
          <td><%= link_to user.user_name, users_show_path(user) %></td>
          <td><%= user.email %></td>
          <td><%= user.bio %></td>

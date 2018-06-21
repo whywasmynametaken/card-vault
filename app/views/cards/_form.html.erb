@@ -21,6 +21,11 @@
     <%= form.text_field :company_name, {class: 'form-control'} %>
   </div>
 
+  <div class="field" id="card_number_field">
+    <%= form.label :card_number %>
+    <%= form.text_field :card_number, {class: 'form-control'} %>
+  </div>
+
   <div class="field" id="amount_field">
     <%= form.label :amount %>
     <%= form.number_field :amount, {class: 'form-control'} %>

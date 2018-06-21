@@ -4,6 +4,9 @@ $(document).on("turbolinks:load", function(){
       $("#card_company_name").attr("disabled", false);
       $("#company_field").show();
 
+      $("#card_card_number").attr("disabled", false);
+      $("#card_number_field").show();
+
       $("#card_amount").attr("disabled", false);
       $("#amount_field").show();
 
@@ -13,6 +16,9 @@ $(document).on("turbolinks:load", function(){
       $("#card_company_name").attr("disabled", false);
       $("#company_name_field").show();
 
+      $("#card_card_number").attr("disabled", true);
+      $("#card_number_field").hide();
+
       $("#card_amount").attr("disabled", true);
       $("#amount_field").hide();
 
@@ -21,6 +27,9 @@ $(document).on("turbolinks:load", function(){
     }else if($("select#card_category").val() === "Rewards"){
       $("#card_company_name").attr("disabled", false);
       $("#company_name_field").show();
+
+      $("#card_card_number").attr("disabled", true);
+      $("#card_number_field").hide();
 
       $("#card_amount").attr("disabled", true);
       $("#amount_field").hide();
