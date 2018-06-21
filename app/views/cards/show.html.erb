@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <strong>Company name:</strong>
+  <strong>Company Name:</strong>
   <%= @card.company_name %>
+</p>
+
+<p>
+  <strong>Card Number:</strong>
+  <%= @card.card_number %>
 </p>
 
 <p>
@@ -18,11 +23,6 @@
 <p>
   <strong>Expire:</strong>
   <%= @card.expire %>
-</p>
-
-<p>
-   <strong>DELETE:</strong>
-   <%#= link_to 'Destroy', Card.find(params[:id]).destroy, data: { confirm: 'Are you sure?' } %>
 </p>
 
 <%= link_to 'Edit', edit_card_path(@card) %> |

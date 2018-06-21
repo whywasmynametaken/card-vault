@@ -5,9 +5,8 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = current_user.cards
+    @cards = current_user.cards.not_expired
   end
-
   # GET /cards/1
   # GET /cards/1.json
   def show
@@ -20,6 +19,10 @@ class CardsController < ApplicationController
 
   # GET /cards/1/edit
   def edit
+  end
+
+  def expired
+     @cards = current_user.cards.expired
   end
 
   # POST /cards
@@ -70,6 +73,6 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:category, :company_name, :amount, :expire)
+      params.require(:card).permit(:category, :company_name, :card_number, :amount, :expire)
     end
 end

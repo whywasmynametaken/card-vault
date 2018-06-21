@@ -1,16 +1,21 @@
 class UsersController < ApplicationController
-  def index
-  end
+   def index
+     @users = User.all
+   end
 
-  def settings
+   def settings
 
-  end
+   end
 
-  def edit
+   def edit
 
-  end
+   end
 
-  def show
-     @user = User.find_by(params[:id])
-  end
+   def show
+     @user = User.find_by(id: params[:id])
+   end
+
+   def current
+     @user = current_user
+   end
 end

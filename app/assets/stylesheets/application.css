@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+.dropdown-items {
+    display: none;
+}
+#myTable_length,#myTable_paginate, .sorting, .sorting_asc  {
+   display: none;
+}
+
+.show {display:inline-block;}
+
+body{
+   margin-bottom: 150px;
+}
+
+
+
+.bottom_nav_bar{
+  box-shadow: 0px 0px 200px gray;
+  background-color: white;
+  border: 1px solid black;
+  height: 150px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+}
+
+ul li {
+  display: inline;
+}
+
+#dm {
+  margin-left: 9em;
+}
+
+.bottom_ul li{
+  margin-left: 3em;
+  margin-right: 2.5em;
+}
+
+.fas {
+  color: black;
+}
+
+@media only screen and (min-width: 500px) {
+       body {
+
+
+
+       }
+       .gr__localhost {
+         font-size: 200%;
+       }
+       p {
+         font-size: 4em;
+       }
+       td {
+         font-size: 2em;
+       }
+
+}
+#friends{
+   display: block;
+}
+
+
+.dataTables_empty{
+   display: none
+}
