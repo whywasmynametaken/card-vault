@@ -58,13 +58,9 @@ ul li {
   color: #7a7a7a;
 }
 
-.fas:active, .far:active {
-  color: black;
-}
-
 .fas:hover, .far:hover {
    transform: scale(1.2);
-  color: black;
+   color: black
 }
 
 
