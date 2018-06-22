@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_20_174732) do
+ActiveRecord::Schema.define(version: 2018_06_22_184800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_06_20_174732) do
     t.date "expire"
     t.bigint "user_id"
     t.string "card_number"
+    t.boolean "shared", default: false
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 

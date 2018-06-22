@@ -24,6 +24,8 @@
   <strong>Expire:</strong>
   <%= @card.expire %>
 </p>
-
+<% if @card.category == "Gift" %>
+   <button id="share" type="button" name="button">Share</button>
+<% end %>
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
