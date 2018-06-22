@@ -1,23 +1,21 @@
 <div class="form">
 
-<h1>Search For New Friends</h1>
-
 <table id="myTable"
       class="row-border"
 >
   <thead>
     <tr class="header">
       <th>Email</th>
-      <th>Name</th>
-      <th>Bio</th>
+      <!-- <th>Name</th> -->
+      <!-- <th>Bio</th> -->
     </tr>
   </thead>
   <tbody>
     <% @users.each do |user| %>
       <tr>
          <td><%= link_to user.user_name, users_show_path(user) %></td>
-         <td><%= user.email %></td>
-         <td><%= user.bio %></td>
+         <!-- <td><%#= user.email %></td> -->
+         <!-- <td><%#= user.bio %></td> -->
     <% end %>
   </tbody>
 </table>

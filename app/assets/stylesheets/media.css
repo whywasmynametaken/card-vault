@@ -5,18 +5,30 @@
         margin-right: 5em
 
     }
-    .gr__localhost {
-      font-size: 200%;
-    }
-    p {
-      font-size: 4em;
-    }
-    td {
-      /* font-size:; */
-      margin-right: 10em;
-    }
+       .gr__localhost {
+         font-size: 400%;
+       }
+       p {
+         font-size: 10em;
+       }
+       td {
+         font-size: 4em;
+         color: black;
+         height: 50px;
+         width: 5000px;
+       }
+       h1, h2, h3{
+          font-size: 6rem;
+       }
     #myTable_wrapper{
-        
+      width: 700px;
     }
+
+    .form{
+      /* width: 700px; */
+   }
+   a{
+      /* font-size: 3em; */
+   }
 
 }

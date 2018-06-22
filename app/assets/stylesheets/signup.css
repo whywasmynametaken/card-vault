@@ -27,16 +27,16 @@
 *, *:before, *:after {
     box-sizing: border-box;
   }
-  
+
   html {
     overflow-y: scroll;
   }
-  
+
   body {
     background: #c1bdba;
     font-family: 'Titillium Web', sans-serif;
   }
-  
+
   a {
     width: 3em;
     text-decoration: none;
@@ -46,18 +46,18 @@
   a:hover {
     color: #179b77;
   }
-  
+
   .form {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
-    max-width: 600px;
+    max-width: 10000px;
     margin: 40px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   }
-  
+
   .tab-group {
-     
+
     list-style: none;
     padding: 0;
     margin: 0 0 40px 0;
@@ -89,12 +89,12 @@
     background: #1ab188;
     color: #ffffff;
   }
-  
-  
- 
-  
+
+
+
+
   label {
-    
+
     -webkit-transform: translateY(6px);
             transform: translateY(6px);
     left: 13px;
@@ -104,11 +104,11 @@
     /* pointer-events: none; */
     font-size: 22px;
   }
-  
 
-  
-  
-  
+
+
+
+
   input, textarea {
     font-size: 22px;
     display: block;
@@ -126,12 +126,12 @@
     outline: 0;
     border-color: #1ab188;
   }
-  
+
   textarea {
     border: 2px solid #a0b3b0;
     resize: vertical;
   }
-  
+
   .button {
     border: 0;
     outline: none;
@@ -149,9 +149,8 @@
   .button:hover, .button:focus {
     background: #179b77;
   }
-  
+
   .button-block {
     display: block;
     width: 100%;
   }
-  
