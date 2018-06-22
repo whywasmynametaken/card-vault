@@ -11,11 +11,11 @@
        p {
          font-size: 10em;
        }
-       td {
+       #myTable td {
          font-size: 4em;
          color: black;
          height: 50px;
-         width: 5000px;
+         width: 500px;
        }
        h1, h2, h3{
           font-size: 6rem;
@@ -27,6 +27,18 @@
     .form{
       /* width: 700px; */
    }
-   
+
+   #peopleTable td a{
+      font-size: 3em;
+      color: black;
+   }
+
+   #peopleTable td {
+      /* font-size: 4em; */
+      color: black;
+      height: 50px;
+      width: 5000px;
+    }
+
 
 }
