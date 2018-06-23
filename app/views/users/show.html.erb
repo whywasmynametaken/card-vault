@@ -1,6 +1,13 @@
+<div class="form">
+
+
 <div class="1">
-   <h1><%= @user.user_name %><br><%= link_to edit_user_registration_path do %>
+   <h1><%= @user.user_name %>
+      <br>
+<% if @user == current_user %>
+      <%= link_to edit_user_registration_path do %>
                               <i class="fas fa-cog"></i>
+                              <% end %>
                               <% end %>
    </h1>
 
@@ -15,9 +22,8 @@
    <% @relationship = current_user.sent_invites.where(invited_id: @user.id).first %>
 
    <% if @relationship %>
-   <button>
-      <%= link_to "Stop following", @relationship, method: :delete %>
-   </button>
+      <%= link_to "Stop following", @relationship, method: :delete, class: 'btn btn-primary' %>
+
    <% else %>
       <%= form_for :relationship, url: relationships_path, html: { method: :post } do |f| %>
          <%= f.hidden_field :invited_id, value: @user.id %>
@@ -48,6 +54,6 @@
 <!-- E-Mail: <%#= current_user.email %> -->
 <br><br>
 
-
+</div>
 <%#= link_to "edit info", users_edit_path %>
 <%#= link_to 'Back', cards_path %>

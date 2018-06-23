@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class='form'>
-<h1>Cards</h1>
+   <div class="titleselec">
 
-<%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"]), {class: 'form-control'}) %>
+<h1 class="card-title">Cards</h1>
 
-<button><%= link_to "EXPIRED CARDS", cards_expired_path %>  </button>
+    <%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"]), {class: 'form-control form1'}) %>
+
+</div>
+<button class="btn btn-danger"><%= link_to "EXPIRED CARDS", cards_expired_path %>  </button>
 
 <table id="myTable" class="row-border">
   <thead>
@@ -18,13 +21,14 @@
   <tbody class='tbodycards'>
     <% @cards.each do |card| %>
       <tr class='card'>
-         <td class='card-title'><%= link_to card.company_name, card %></td>
-         <td ><%= card.category %></td>
-         <td >$<%= card.amount %></td>
-         <td ><%= card.expire %></td>
+         <td class='card_title'><strong><%= link_to card.company_name, card %></strong></td>
+         <td><i><%= card.category %> Card<i></td>
+         <td><% if card.amount? %>$<%= card.amount %><% end %></td>
+         <td><%= card.expire %></td>
          <!-- <td><%#= link_to 'Edit', edit_card_path(card) %></td> -->
          <!-- <td><%#= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
+
     <% end %>
   </tbody>
 </table>

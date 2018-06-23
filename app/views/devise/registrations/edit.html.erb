@@ -1,3 +1,5 @@
+<div class="form form2">
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -7,11 +9,11 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field" id="add_user_name">
+  <div class="field edit-page" id="add_user_name">
      <%= f.label :user_name %>
      <%= f.text_field :user_name %>
   </div>
-  <div class="field" id="add_bio">
+  <div class="field edit-page" id="add_bio">
       <%= f.label :bio %>
       <%= f.text_field :bio %>
    </div>
@@ -31,7 +33,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div> -->
 
-  <div class="field" id="update_validate">
+  <div class="field edit-page" id="update_validate">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
@@ -41,8 +43,15 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+
+
+<div class="cancel">
+<!-- <h3>Cancel my account</h3> -->
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+</div>
+
 
 <%= link_to "Back", :back %>
+
+</div>

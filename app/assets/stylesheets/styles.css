@@ -39,10 +39,34 @@ ul li {
 .fas {
   color: black;
 }
+.titleselec{
+   display: flex;
 
+}
+.card-title{
+   /* color: white; */
+}
 
+.form1{
+   border-top: 100em;
+   margin-left: 4em
+}
+
+.edit-page{
+   margin: 5em;
+}
+
+.form2{
+   height: 300em;
+   display: inline-flex;
+   flex-direction: row;
+}
+
+a:visited{
+   /* font-style: normal; */
+   color: black;
+}
 /* #myTable_filter{
   display: table-column;
   margin-right: 3em;
 } */
-

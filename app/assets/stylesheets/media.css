@@ -25,7 +25,7 @@
     }
 
     .form{
-      /* width: 700px; */
+      min-width: 700px;
    }
 
    #peopleTable td a{
@@ -41,7 +41,7 @@
     }
 
     .field{
-      height: 100px;
+      /* height: 100px; */
       margin-bottom: 3em;
    }
 
@@ -49,6 +49,9 @@
       font-size: 300%;
             margin-bottom: 3em;
 
+   }
+   .btn .btn-primary{
+      size:30em
    }
 
 
