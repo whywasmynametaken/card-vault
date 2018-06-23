@@ -1,28 +1,29 @@
-<div class="form">
+<div class="expform">
 
 <h1>Expired Cards</h1>
+<table id="myTable" class="row-border">
+  <thead>
+    <tr class="header">
+      <th class='comp'>Company name</th>
+      <th class='catagory'>Category</th>
+      <th class='amount'>Amount</th>
+      <th class='expire'>Expire</th>
+    </tr>
+  </thead>
+  <tbody class='tbodycards'>
+    <% @cards.each do |card| %>
+      <tr class='card'>
+         <td class='card_title'><strong><%= link_to card.company_name, card %></strong></td>
+         <td><i><%= card.category %> Card<i></td>
+         <td><% if card.amount? %>$<%= card.amount %><% end %></td>
+         <td><%= card.expire %></td>
+         <!-- <td><%#= link_to 'Edit', edit_card_path(card) %></td> -->
+         <!-- <td><%#= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
 
-
-   <table id="myTable"
-          class="row-border">
-      <thead>
-         <tr class="header">
-            <th>Company name</th>
-            <th>Category</th>
-            <th>Amount</th>
-            <th>Expire</th>
-         </tr>
-      </thead>
-      <tbody>
-         <% @cards.each do |card| %>
-            <tr>
-               <td><%= link_to card.company_name, card %></td>
-               <td><%= card.category %></td>
-               <td>$<%= card.amount %></td>
-               <td><%= card.expire %></td>
-            </tr>
-         <% end %>
-      </tbody>
-   </table>
+    <% end %>
+  </tbody>
+</table>
+</div>
 
    </div>
