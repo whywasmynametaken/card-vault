@@ -40,5 +40,16 @@
       width: 5000px;
     }
 
+    .field{
+      height: 100px;
+      margin-bottom: 3em;
+   }
+
+   .field label{
+      font-size: 300%;
+            margin-bottom: 3em;
+
+   }
+
 
 }

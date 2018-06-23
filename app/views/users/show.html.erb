@@ -1,6 +1,14 @@
-<h1><%= @user.user_name %> </h1>
-<h3>Bio:</h3>
-<%= @user.bio %>
+<div class="1">
+   <h1><%= @user.user_name %><br><%= link_to edit_user_registration_path do %>
+                              <i class="fas fa-cog"></i>
+                              <% end %>
+   </h1>
+
+
+</div>
+
+<hr>
+<h4><%= @user.bio %></h4>
 <br>
 <p>
 <% if current_user %>
@@ -24,17 +32,22 @@
          visibility:hidden;
       }
    </style>
-   <%= link_to relationships_path do %>
-      <i class="fas fa-heart fa-7x"></i>
-   <% end %>
-   <%= link_to "edit info", edit_user_registration_path %>
+
    <%#= link_to 'Back', cards_path %>
+      <div class="friends">
+      <%= link_to users_index_path do %>
+         <i class="fas fa-search fa-7x"></i>
+         <% end %>
+      <%= link_to relationships_path do %>
+         <i class="fas fa-heart fa-7x"></i>
+      <% end %>
+      </div>
    <%= link_to "logout", destroy_user_session_path, method: :delete %>
 <% end  %>
 </p>
-E-Mail: <%= current_user.email %>
+<!-- E-Mail: <%#= current_user.email %> -->
 <br><br>
 
 
 <%#= link_to "edit info", users_edit_path %>
-<%= link_to 'Back', cards_path %>
+<%#= link_to 'Back', cards_path %>
