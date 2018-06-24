@@ -1,31 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="form">
 
-<p>
-  <strong>Category:</strong>
-  <%= @card.category %>
-</p>
+<h2 align="center"><%= @card.company_name %> <%= @card.category %> Card</h2>
+<!-- <p>
+  <%#= @card.category %> Card
+</p> -->
 
-<p>
-  <strong>Company Name:</strong>
-  <%= @card.company_name %>
-</p>
+<h3 align="center">
+  <% if @card.amount? %><hr><strong>$<%= @card.amount %></strong><hr><% end %>
+</h3>
+<br><br>
+<h4>
+   <% if @card.card_number? %><strong>Card Nmber: <%= @card.card_number %></strong><% end %>
+</h4>
 
-<p>
-  <strong>Card Number:</strong>
-  <%= @card.card_number %>
-</p>
+<h4>
+   <% if @card.expire? %><strong>Expire Date: <%= @card.expire %></strong><% end %>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @card.amount %>
-</p>
+</h4>
 
-<p>
-  <strong>Expire:</strong>
-  <%= @card.expire %>
-</p>
+<%= link_to 'Edit Card', edit_card_path(@card) %> <br>
+
 <% if @card.category == "Gift" %>
-   <button id="share" type="button" name="button">Share</button>
+   <button id="share" type="button" name="button">Share Card</button>
 <% end %>
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+
+<%#= link_to 'Back', cards_path %>
+
+
+</div>

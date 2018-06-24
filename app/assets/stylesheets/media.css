@@ -17,8 +17,16 @@
          height: 50px;
          width: 500px;
        }
-       h1, h2, h3{
+       h1 {
           font-size: 6rem;
+       }
+
+       h2 {
+          font-size: 4rem;
+       }
+
+       h3 {
+          font-size: 3rem;
        }
     #myTable_wrapper{
       width: 700px;
