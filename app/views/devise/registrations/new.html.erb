@@ -1,18 +1,14 @@
 <div class='form'>
-  <ul class='tab-group'>
-    <li class='tab active'><h2><%= render "devise/shared/links" %></h2></li> 
-    <li class='tab'><h2><a href="">Sign up</a></h2></li>
-  </ul> 
   <div class 'signup'>
-      
-   
+
+
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
 
     <div class='signupfeild'>
-      
-    
+
+
       <div class="field">
         <%= f.label :email,{class: 'emailfei'} %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -20,23 +16,25 @@
 
       <div class="field">
         <%= f.label :password ,{class: 'passwordfei'}%>
+        <br>
+        <%= f.password_field :password, autocomplete: "off" %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation,{class: 'confpasswordfei'} %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
-
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
     </div>
-    
+    <div class='login_buttons'>
+      <ul class='tab-group'>
+        <li class='tab'><h2><%= f.submit "Sign up" %></h2></li>
+        <li class='tab active'><h2><%= render "devise/shared/links" %></h2></li>
+      </ul>
+    </div>
+
     <% end %>
   </div> <!--/sign up -->
 </div><!-- /form -->
-

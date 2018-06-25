@@ -1,8 +1,4 @@
 <div class='form'>
-  <ul class='tab-group'>
-    <li class='tab active'><h2><%= render "devise/shared/links" %></h2></li> 
-    <li class='tab'><h2><a href="">Log In</a></h2></li>
-  </ul> 
 
    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -22,9 +18,15 @@
     </div>
   <% end -%>
 
-  <div class="actions">
+  <!-- <div class="actions">
     <%= f.submit "Log in" %>
+  </div> -->
+  <br>
+  <div class='login_buttons'>
+    <ul class='tab-group'>
+      <li class='tab'><h2><%= f.submit "Log in" %></h2></li>
+      <li class='tab active'><h2><%= render "devise/shared/links" %></h2></li>
+      <!-- <li class='tab'><h2><a href="">Log In</a></h2></li> -->
+    </ul>
   </div>
 <% end %>
-
-

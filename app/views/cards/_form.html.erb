@@ -14,26 +14,31 @@
 
   <div class="field" id="category_field">
     <%= form.label :category %>
+    <br><br>
     <%= form.select :category, options_for_select(["Gift", "Membership", "Rewards"]),{}, {class: 'form-control'} %>
   </div>
 
   <div class="field" id="company_name_field">
     <%= form.label :company_name %>
+    <br><br>
     <%= form.text_field :company_name, {class: 'form-control'} %>
   </div>
 
   <div class="field" id="card_number_field">
     <%= form.label :card_number %>
+    <br><br>
     <%= form.text_field :card_number, {class: 'form-control'} %>
   </div>
 
   <div class="field" id="amount_field">
     <%= form.label :amount %>
+    <br><br>
     <%= form.number_field :amount, {class: 'form-control'} %>
   </div>
 
   <div class="field" id="expire_field">
     <%= form.label :expire %>
+    <br><br>
     <%= form.date_field :expire, {class: 'form-control'} %>
   </div>
 

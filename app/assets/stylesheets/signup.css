@@ -1,42 +1,20 @@
-
-
-
-
-
-
-
-
-
-
-
 .footer, .bottom{
     display: none;
 }
-
-
-
 .signupfeild{
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
 *, *:before, *:after {
     box-sizing: border-box;
   }
-
   html {
     overflow-y: scroll;
   }
-
   body {
     background: #c1bdba;
     font-family: 'Titillium Web', sans-serif;
   }
-
   a {
     width: 3em;
     text-decoration: none;
@@ -46,12 +24,11 @@
   a:hover {
     color: #179b77;
   }
-
   .form{
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
     max-width: 10000px;
-    margin: 40px auto;
+    margin: 0px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   }
@@ -59,17 +36,20 @@
      background: rgba(87, 1, 9, 1);
      padding: 40px;
      max-width: 10000px;
-     margin: 40px auto;
+     margin: 0px auto;
      border-radius: 4px;
      box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-
 }
   .tab-group {
-
+    width: 100%;
     list-style: none;
     padding: 0;
     margin: 0 0 40px 0;
     font-size: 50%;
+  }
+  .login_buttons{
+    margin-left: 20%;
+    margin-right: 20%;
   }
   .tab-group:after {
     content: "";
@@ -97,10 +77,6 @@
     background: #1ab188;
     color: #ffffff;
   }
-
-
-
-
   label {
 
     -webkit-transform: translateY(6px);
@@ -111,6 +87,7 @@
     -webkit-backface-visibility: hidden;
     /* pointer-events: none; */
     font-size: 22px;
+    margin: auto;
   }
 
 
