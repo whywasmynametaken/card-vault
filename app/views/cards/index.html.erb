@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
 <div class='form'>
    <div class="titleselec">
+     <h2 class="card-title">My Card Vault</h2>
+     <span class='mcv_menu'>
+       <%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"]), {class: 'form-control form1'}) %>
+       <button class="btn btn-danger" id='expbtn'><%= link_to "EXPIRED CARDS", cards_expired_path %> </button>
+     </span>
+     <br>
+   </div>
 
-<h1 class="card-title">Cards</h1>
-
-    <%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"]), {class: 'form-control form1'}) %>
+<div>
 
 </div>
-<button class="btn btn-danger"><%= link_to "EXPIRED CARDS", cards_expired_path %>  </button>
-
 <table id="myTable" class="row-border">
   <thead>
     <tr class="header">

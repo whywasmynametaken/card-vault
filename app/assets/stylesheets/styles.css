@@ -40,8 +40,14 @@ ul li {
   color: black;
 }
 .titleselec{
-   display: flex;
-
+  width: 50%;
+}
+.mcv_menu{
+  display: flex;
+  flex-direction: row;
+}
+#expbtn{
+  margin-left: 10px;
 }
 .card-title{
    /* color: white; */
@@ -49,7 +55,7 @@ ul li {
 
 .form1{
    border-top: 100em;
-   margin-left: 4em
+   width: 100%;
 }
 
 .edit-page{
@@ -70,7 +76,8 @@ a:visited{
    /* font-style: normal; */
    color: black;
 }
-/* #myTable_filter{
+#myTable_filter{
   display: table-column;
   margin-right: 3em;
-} */
+  margin-bottom: 2rem;
+}
