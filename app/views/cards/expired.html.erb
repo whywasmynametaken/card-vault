@@ -14,9 +14,9 @@
     <% @cards.each do |card| %>
       <tr class='card'>
          <td class='card_title'><strong><%= link_to card.company_name, card %></strong></td>
-         <td><i><%= card.category %> Card<i></td>
-         <td><% if card.amount? %>$<%= card.amount %><% end %></td>
-         <td><%= card.expire %></td>
+         <td class="extra"><i><%= card.category %> Card<i></td>
+         <td class="extra"><% if card.amount? %>$<%= card.amount %><% end %></td>
+         <td class="extra"><%= card.expire %></td>
          <!-- <td><%#= link_to 'Edit', edit_card_path(card) %></td> -->
          <!-- <td><%#= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>

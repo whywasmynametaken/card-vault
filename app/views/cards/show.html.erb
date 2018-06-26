@@ -19,11 +19,13 @@
 
 <%= link_to 'Edit Card', edit_card_path(@card) %> <br>
 
+
+
 <% if @card.category == "Gift" %>
-   <button id="share" type="button" name="button">Share Card</button>
+   <%= link_to "SHARE CARD", cards_shared_path(@card), method: :put  %>
 <% end %>
 
+
+
 <%#= link_to 'Back', cards_path %>
-
-
 </div>

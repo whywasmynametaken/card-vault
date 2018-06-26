@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/profile'
   get 'cards/expired'
+  get 'cards/shared'
+  post 'cards/shared'
   resources :cards
   devise_for :users, controllers: { sessions: 'users/sessions' }
   root to: "cards#index"

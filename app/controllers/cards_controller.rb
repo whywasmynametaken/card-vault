@@ -21,6 +21,12 @@ class CardsController < ApplicationController
   def edit
   end
 
+  def shared
+   @card = Card.find_by(params[:id])
+   @card.update_attributes(shared: true)
+   redirect_to cards_path(shared: false)
+  end
+
   def expired
      @cards = current_user.cards.expired
   end
