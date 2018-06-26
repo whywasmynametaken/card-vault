@@ -1,17 +1,14 @@
-/* Dropdown Button */
-.dropdown-items {
-    display: none;
-}
+
 
 
 .show {display:inline-block;}
 
 body{
-  /* width: 800px; */
+  width: 800px;
 }
 
 
-.footer{
+/* .footer{
   box-shadow: 0px 0px 200px lightgray;
   border: 1px solid black;
   height: 150px;
@@ -21,7 +18,7 @@ body{
   bottom: 0;
   overflow: hidden;
 
-}
+} */
 
 ul li {
   display: inline;
@@ -39,9 +36,9 @@ ul li {
 .fas {
   color: black;
 }
-.titleselec{
+/* .titleselec{
   width: 50%;
-}
+} */
 .mcv_menu{
   display: flex;
   flex-direction: row;
@@ -53,13 +50,13 @@ ul li {
    color: white;
 }
 
-.form1{
+/* .form1{
    border-top: 100em;
    width: 100%;
-}
+} */
 
 .edit-page{
-   margin: 5em;
+   /* margin: 5em; */
 }
 
 .form2{
@@ -73,7 +70,7 @@ a {
 }
 
 a:visited{
-   /* font-style: normal; */
+   font-style: normal;
    color: black;
 }
 #myTable_filter{

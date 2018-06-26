@@ -49,14 +49,14 @@
    }
 
    #peopleTable td a{
-      font-size: 3em;
+      font-size: 5em;
       color: black;
    }
 
    #peopleTable td {
       /* font-size: 4em; */
       color: black;
-      height: 50px;
+      height: 70px;
       width: 5000px;
     }
 
@@ -96,13 +96,19 @@
 
    input[type="search"], textarea {
    width: 600px !important;
-   height: 50px !important;
+   height: 80px !important;
    background-color: white !important;
-   margin-bottom: 2em;
+   font-size: 60px;
+   color: black;
+   margin-bottom: 1em;
    }
 
    .btn-danger {
       width: 300px;
+   }
+
+   option {
+      font-size: 12px;
    }
 
 }

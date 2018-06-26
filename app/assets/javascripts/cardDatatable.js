@@ -2,6 +2,7 @@
 $(document).on("turbolinks:load", function(){
    var datatable = $('#myTable').DataTable({paging: false,
                                            "language": { "search": "" },
+                                           
                                                    });
 
    $('#category').on('change', function(){

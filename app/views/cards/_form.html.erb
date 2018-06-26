@@ -1,4 +1,6 @@
 
+<div class="form">
+
 <%= form_with(model: card, local: true) do |form| %>
   <% if card.errors.any? %>
     <div id="error_explanation">
@@ -50,3 +52,5 @@
 
  </div>
 <% end %>
+
+</div>

@@ -1,21 +1,21 @@
 <div class="form">
 
-<h2 align="center"><%= @card.company_name %> <%= @card.category %> Card</h2>
+<h1 align="center"><%= @card.company_name %> <%= @card.category %> Card</h1>
 <!-- <p>
   <%#= @card.category %> Card
 </p> -->
 
-<h3 align="center">
+<h1 align="center">
   <% if @card.amount? %><hr><strong>$<%= @card.amount %></strong><hr><% end %>
-</h3>
-<h4>
+</h1>
+<h3>
    <% if @card.card_number? %><strong>Card Nmber: <%= @card.card_number %></strong><% end %>
-</h4>
+</h3>
 
-<h4>
+<h3>
    <% if @card.expire? %><strong>Expire Date: <%= @card.expire %></strong><% end %>
 
-</h4>
+</h3>
 <button class="btn btn-success"type="button" name="button">
 <h2>
 <%= link_to 'Edit Card', edit_card_path(@card) %> <br>
@@ -25,7 +25,9 @@
 
 
 <% if @card.category == "Gift" %>
+<button class="btn btn-primary" type="button" name="button">
    <%= link_to "SHARE CARD", cards_shared_path(@card), method: :put  %>
+</button>
 <% end %>
 
 
