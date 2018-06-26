@@ -16,8 +16,11 @@
    <% if @card.expire? %><strong>Expire Date: <%= @card.expire %></strong><% end %>
 
 </h4>
-
+<button class="btn btn-success"type="button" name="button">
+<h2>
 <%= link_to 'Edit Card', edit_card_path(@card) %> <br>
+</h2>
+</button>
 
 
 

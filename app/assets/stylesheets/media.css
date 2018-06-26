@@ -94,11 +94,11 @@
     border-radius: 4rem !important;
 }
 
-   input, textarea {
+   input[type="search"], textarea {
    width: 600px !important;
    height: 50px !important;
    background-color: white !important;
-   /* margin-bottom: 2em; */
+   margin-bottom: 2em;
    }
 
    .btn-danger {
