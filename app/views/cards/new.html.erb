@@ -1,8 +1,11 @@
 <script src="createCard.js"></script>
+
 <link href="new_card.css">
-  <br>
-  <div class='new_categories'>
-      <h1 style="colour: white;">New Card</h1>
-        <%= render 'form', card: @card %>
+
+  <div class="form" id="new_form">
+
+      <h1 style="color: white;">New Card</h1>
+
+      <%= render 'form', card: @card %>
 
   </div>

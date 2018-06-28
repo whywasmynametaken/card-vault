@@ -47,17 +47,20 @@
      margin-left: 20%;
      margin-right: 20%;
    }
+   #peopleTable{
+      min-width: 123%;
+   }
 
    #peopleTable td a{
-      font-size: 5em;
-      color: black;
+      /* font-size: 5em;
+      color: black; */
    }
 
    #peopleTable td {
-      /* font-size: 4em; */
+      font-size: 4em; */
       color: black;
       height: 70px;
-      width: 5000px;
+      /* width: 5000px; */
     }
 
     .field{
@@ -81,7 +84,7 @@
    input[type="text"], input[type="number"], input[type="date"]
    {
        font-size:100px;
-       height: 100px !important;
+       /* height: 100px !important; */
    }
    select.form-control {
       font-size:80px;
@@ -110,5 +113,33 @@
    option {
       font-size: 12px;
    }
+   #new_form{
+      width: 123%;
+   }
+   a[href="/cards/expired"]{
+      font-size: 50px;
+   }
+   #friends a{
+      font-size: 400%;
+   }
+
+.btn-success{
+   font-size: 5em;
+}
+
+#supage label{
+   margin-bottom: .5em;
+}
+#supage input{
+   height: 100px;
+   background-color: white;
+}
+
+#supage em{
+   font-size: 30px;
+}
+label.confpasswordfei{
+   font-size: 4em;
+}
 
 }

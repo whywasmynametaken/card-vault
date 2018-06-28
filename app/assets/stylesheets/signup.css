@@ -34,7 +34,7 @@
   .expform{
      background: rgba(87, 1, 9, 1);
      /* padding: 40px; */
-     max-width: 10000px;
+     min-width: 123%;
      /* margin: 0px auto; */
      border-radius: 4px;
      box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -138,3 +138,7 @@
     display: block;
     width: 100%;
   }
+
+  .btn-primary{
+     font-size: 5em;
+ }

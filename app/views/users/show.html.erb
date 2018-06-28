@@ -1,11 +1,11 @@
-<div class="form">
+<div class="form" id="new_form">
 
 
 <div class="1">
    <h1><%= @user.user_name %>
       <br>
-<% if @user == current_user %>
-      <%= link_to edit_user_registration_path do %>
+      <% if @user.user_name == current_user %>
+            <%= link_to edit_user_registration_path do %>
                               <i class="fas fa-cog"></i>
                               <% end %>
                               <% end %>
@@ -15,7 +15,7 @@
 </div>
 
 <hr>
-<h4><%= @user.bio %></h4>
+<h3><%= @user.bio %></h3>
 <br>
 <p>
 <% if current_user %>
@@ -40,7 +40,7 @@
    </style>
 
 
-   
+
    <%= link_to "Shared Cards", cards_shared_path %>
 
 

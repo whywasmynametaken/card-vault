@@ -1,10 +1,10 @@
 
 <div class='form'>
    <div class="titleselec">
-     <h2 class="card-title">My Card Vault</h2>
+     <h1 class="card-title">My Card Vault</h1>
      <span class='mcv_menu'>
        <%= select_tag("category", options_for_select(["All", "Gift", "Membership", "Rewards"]), {class: 'form-control form1'}) %>
-       <button class="btn btn-danger" id='expbtn'><%= link_to "EXPIRED CARDS", cards_expired_path %> </button>
+       <button class="btn btn-danger" id='expbtn'><%= link_to "EXPIRED", cards_expired_path %> </button>
      </span>
      <br>
    </div>

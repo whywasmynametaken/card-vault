@@ -16,30 +16,30 @@
     <%= yield %>
 
      <% if current_user %>
-        <div class="bottom_nav_bar">
-      <ul class="bottom_ul">
-        <li><%= link_to cards_path do %>
-            <i class="fas fa-credit-card fa-7x"></i>
-            <% end %>
-        </li>
-        <li><%= link_to users_index_path do %>
-            <i class="fas fa-search fa-7x"></i>
-            <% end %>
-        </li>
-        <li><%= link_to new_card_path do %>
-            <i class="far fa-plus-square fa-8x"></i>
-            <% end %>
-        </li>
-        <!-- <li><%#= link_to relationships_path do %>
-            <i class="fas fa-heart fa-7x"></i>
-            <%# end %>
-        </li> -->
-        <li><%= link_to users_show_path(current_user) do %>
-            <i class="fas fa-user-alt fa-7x"></i>
-            <% end %>
-        </li>
-      </ul>
-    </div>
+         <div class="bottom_nav_bar">
+            <ul class="bottom_ul">
+               <li><%= link_to cards_path do %>
+                  <i class="fas fa-credit-card fa-7x"></i>
+                  <% end %>
+               </li>
+               <li><%= link_to users_index_path do %>
+                  <i class="fas fa-search fa-7x"></i>
+                  <% end %>
+               </li>
+               <li><%= link_to new_card_path do %>
+                  <i class="far fa-plus-square fa-8x"></i>
+                  <% end %>
+               </li>
+               <!-- <li><%#= link_to relationships_path do %>
+                  <i class="fas fa-heart fa-7x"></i>
+                  <%# end %>
+               </li> -->
+               <li><%= link_to users_show_path(current_user) do %>
+                  <i class="fas fa-user-alt fa-7x"></i>
+                  <% end %>
+               </li>
+            </ul>
+         </div>
     <% end %>
   </body>
 </html>

@@ -1,5 +1,5 @@
 
-<div class="form">
+<div id="card_form">
 
 <%= form_with(model: card, local: true) do |form| %>
   <% if card.errors.any? %>
@@ -13,7 +13,7 @@
       </ul>
     </div>
   <% end %>
-<div id="new_card">
+<div id="new_card" >
 
   <div class="field" id="category_field">
     <%= form.label :category %>
